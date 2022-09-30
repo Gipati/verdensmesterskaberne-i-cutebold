@@ -10,7 +10,9 @@ radio.onReceivedNumber(function (receivedNumber) {
     } else if (receivedNumber == 4) {
         cuteBot.backforward()
     } else if (receivedNumber == 5) {
-        music.startMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Once)
+        music.playMelody("C D E - E - E F ", 90)
+        music.playMelody("D - D - E E F F ", 90)
+        music.playMelody("F F E D D - - - ", 90)
         for (let index = 0; index < 3; index++) {
             cuteBot.moveTime(cuteBot.Direction.left, 100, 2)
         }
@@ -20,4 +22,4 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 radio.setGroup(93)
 music.playMelody("C D E F G A B C5 ", 315)
-cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0x00ff00)
+cuteBot.colorLight(cuteBot.RGBLights.ALL, 0xffff00)
